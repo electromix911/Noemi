@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perdóname, Noemí ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(#ffd6e7,#ffeef5);
+text-align:center;
+overflow-x:hidden;
+}
+
+h1{color:#d1005d;margin-top:20px;}
+p{font-size:18px;color:#5c0030;padding:0 20px;}
+img{
+width:250px;
+border-radius:18px;
+margin:10px;
+box-shadow:0 0 15px pink;
+}
+
+button{
+background:#ff2d75;
+color:#fff;
+border:none;
+padding:12px 25px;
+border-radius:30px;
+font-size:18px;
+margin:15px;
+cursor:pointer;
+}
+
+.oculto{
+display:none;
+margin-top:20px;
+}
+
+.corazon{
+position:fixed;
+font-size:25px;
+color:red;
+animation:subir 7s linear infinite;
+}
+
+@keyframes subir{
+0%{transform:translateY(100vh);opacity:0;}
+20%{opacity:1;}
+100%{transform:translateY(-120vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<h1>Perdóname, Noemí ❤️</h1>
+
+<img src="noemi1.jpg">
+<img src="noemi2.jpg">
+
+<p>
+Noemí... sé que te hice sentir mal y me arrepiento de corazón.
+Nunca quise herirte. Si pudiera regresar el tiempo lo haría para cambiar ese momento.
+Solo quiero que sepas que te quiero mucho y que espero algún día poder recuperar tu sonrisa.
+</p>
+
+<button onclick="document.getElementById('espejo').style.display='block'">
+❤️ Un recuerdo nuestro
+</button>
+
+<div id="espejo" class="oculto">
+<img src="espejo.jpg">
+<h2>Este momento siempre tendrá un lugar especial en mi corazón. ❤️</h2>
+</div>
+
+<button onclick="document.getElementById('recuerdo').style.display='block'">
+🌹 ¿Recuerdas?
+</button>
+
+<div id="recuerdo" class="oculto">
+<img src="recuerdo.jpg">
+<p>
+¿Recuerdas?<br><br>
+El mejor momento contigo no fue por el lugar, sino porque estabas tú.
+Desde ese día comprendí lo especial que eres para mí.
+Perdóname, Noemí. Ojalá podamos crear muchos recuerdos más. ❤️
+</p>
+</div>
+
+<script>
+setInterval(()=>{
+let c=document.createElement("div");
+c.className="corazon";
+c.innerHTML="❤️";
+c.style.left=Math.random()*100+"vw";
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),7000);
+},300);
+</script>
+
+</body>
+</html>
